@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Service Request</title>
+</head>
+<body>
+    <h1>Track Service Request</h1>
+    <ul>
+        {% for request in service_requests %}
+            <li>{{ request.type }} - Status: {{ request.status }}</li>
+        {% empty %}
+            <li>No service requests found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
